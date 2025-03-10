@@ -1,0 +1,21 @@
+[project]
+name = "book_project"
+version = "0.1.0"
+description = "book-project using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0",
+    "pandoc",  # Markdown to PDF conversion
+]
+
+[project.scripts]
+kickoff = "book_project.main:kickoff"
+plot = "book_project.main:plot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"

@@ -1,0 +1,36 @@
+develop_chapter_outlines:
+  description: >
+    Transform the research crew's table of contents into detailed chapter outlines:
+    1. Review the toc_researcher's structured outline
+    2. Expand each chapter's structure with appropriate depth
+    3. Distribute content to achieve balanced coverage across {pages} pages
+    4. Define key sections and subsections within each chapter
+    5. Specify approximate page allocations per section
+    6. Ensure logical content flow and progression
+  expected_output: >
+    For each chapter:
+    - Detailed outline with sections and subsections
+    - Key points to be covered
+    - Estimated page allocation per section
+    - Content flow and transition notes
+    - Special elements (examples, case studies, etc.)
+  agent: toc_writer
+
+write_chapter_content:
+  description: >
+    Create polished chapter content based on the research_specialist's findings and toc_writer's outlines:
+    1. Review research findings and chapter outline
+    2. Develop content according to specified page allocations
+    3. Create engaging examples and case studies
+    4. Maintain consistent depth and style
+    5. Include practical applications where relevant
+    6. Ensure smooth transitions between sections
+  expected_output: >
+    For each chapter ({pages} pages total):
+    - Complete chapter content
+    - Engaging introduction and conclusion
+    - Well-developed examples and case studies
+    - Clear section transitions
+    - Consistent formatting and style
+    - References to research materials where appropriate
+  agent: chapter_writer

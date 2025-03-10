@@ -1,0 +1,37 @@
+generate_toc:
+  description: >
+    Analyze the given topic and develop a structured table of contents with the following steps:
+    1. Assess the scope and scale of the topic for a {pages}-page book
+    2. Identify main themes and core concepts
+    3. Organize content into {total_chapters} logical chapters
+    4. Develop relevant subtopics where necessary
+    5. Ensure balanced distribution of content across {pages} pages
+    6. Verify logical flow and progression
+    7. Allocate approximate page counts for each chapter and section
+  expected_output: >
+    A structured outline including:
+    - Chapter titles
+    - Main topics per chapter with suggested page counts
+    - Relevant subtopics where applicable
+    - Brief justification for the structure and page distribution
+    - Total page count verification ({pages} pages)
+  agent: toc_researcher
+
+research_topics:
+  description: >
+    Using the structured outline, conduct comprehensive research on each topic and subtopic:
+    1. Gather information from reliable sources
+    2. Identify key concepts and theories
+    3. Collect relevant data and examples
+    4. Document important findings
+    5. Note relationships between topics
+    6. Scale research depth according to allocated page counts
+  expected_output: >
+    For each topic and subtopic:
+    - Key findings and concepts
+    - Important theories and principles
+    - Relevant data points
+    - Source references
+    - Suggested content depth based on page allocation
+    - Coverage recommendations for {pages}-page format
+  agent: research_specialist
