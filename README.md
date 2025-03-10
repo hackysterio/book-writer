@@ -1,6 +1,6 @@
-# {{crew_name}} Crew
+# Book Writing Project
 
-Welcome to the {{crew_name}} Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the Book Writing Project, powered by [crewAI](https://crewai.com). This project is designed to help you write a book on any topic of your choice, regardless of how many chapters and pages you want. It aims to make a deeper understanding of concepts easier. The goal of the book is to take you from zero to hero on any concept with the power of AI agents that are researching and writing the book.
 
 ## Installation
 
@@ -23,34 +23,45 @@ crewai install
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Modify `src/book_project/config/agents.yaml` to define your agents
-- Modify `src/book_project/config/tasks.yaml` to define your tasks
-- Modify `src/book_project/crew.py` to add your own logic, tools and specific args
+- **Writing Tasks and Agents:**
+  - Modify `src/book_project/crews/writing/config/agents.yaml` to define your writing agents
+  - Modify `src/book_project/crews/writing/config/tasks.yaml` to define your writing tasks
+
+- **Research Tasks and Agents:**
+  - Modify `src/book_project/crews/research/config/agents.yaml` to define your research agents
+  - Modify `src/book_project/crews/research/config/tasks.yaml` to define your research tasks
+
+- (Check if `crew.py` should exist or be created)
 - Modify `src/book_project/main.py` to add custom inputs for your agents and tasks
 
 ## Running the Project
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+To start the book writing process and begin task execution, run this from the root folder of your project:
 
 ```bash
 crewai run
 ```
 
-This command initializes the book-project Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This command initializes the Book Writing Project, assembling the agents and assigning them tasks as defined in your configuration. The system will generate the output of your book writing process in the `output` folder.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+## Understanding Your Project
 
-## Understanding Your Crew
+The Book Writing Project is composed of multiple AI agents, each with unique roles, goals, and tools. These agents are organized into two different crews: one dedicated to research and the other to writing. 
 
-The book-project Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+- **Writing Crew:**
+  - The writing crew's tasks are defined in `src/book_project/crews/writing/config/tasks.yaml`.
+  - The writing agents' capabilities and configurations are outlined in `src/book_project/crews/writing/config/agents.yaml`.
+
+- **Research Crew:**
+  - The research crew's tasks are defined in `src/book_project/crews/research/config/tasks.yaml`.
+  - The research agents' capabilities and configurations are outlined in `src/book_project/crews/research/config/agents.yaml`.
+
+Each crew is connected through flows to ensure seamless collaboration, contributing to the overall goal of writing a comprehensive book.
 
 ## Support
 
-For support, questions, or feedback regarding the {{crew_name}} Crew or crewAI.
+For support, questions, or feedback regarding the Book Writing Project:
 
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+- Reach out to me via [LinkedIn](https://www.linkedin.com/in/isu-momodu/)
+- Visit [crewAI documentation](https://docs.crewai.com)
+- [Chat with crewAI docs](https://chatg.pt/DWjSBZn)
